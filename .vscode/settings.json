@@ -1,11 +1,14 @@
 {
   "cSpell.words": [
     "Benda",
+    "clsx",
     "isize",
     "kolynz",
     "println",
+    "Rustify",
     "struct",
     "structs",
+    "typecheck",
     "usize"
   ]
 }
