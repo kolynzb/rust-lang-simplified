@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Rustify",
   tagline: "Rust the Easy way",
-  favicon: "img/favicon.ico",
+  favicon: "img/muscat.png",
 
   // Set the production url of your site here
   url: "https://rust-lang-simplified.vercel.app/",
@@ -18,7 +18,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "rust-cirlce",
+  organizationName: "rust-circle",
   projectName: "rust-lang-simplified", // Usually your repo name.
   trailingSlash: false,
   onBrokenLinks: "throw",
@@ -64,10 +64,10 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "My Site",
+        title: "Rust Simplified",
         logo: {
           alt: "My Site Logo",
-          src: "img/logo.svg",
+          src: "img/muscat.png",
         },
         items: [
           {
@@ -78,7 +78,7 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/kolynzb/rust-lang-simplified/",
             label: "GitHub",
             position: "right",
           },
@@ -111,6 +111,10 @@ const config = {
                 label: "Twitter",
                 href: "https://twitter.com/docusaurus",
               },
+              {
+                label: "Whatsapp",
+                href: "https://twitter.com/docusaurus",
+              },
             ],
           },
           {
@@ -127,7 +131,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Rust Simplified, Inc.`,
       },
       prism: {
         theme: lightCodeTheme,
