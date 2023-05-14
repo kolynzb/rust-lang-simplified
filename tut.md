@@ -16,3 +16,4 @@
 [hero](https://github.com/thecodingmachine/react-native-boilerplate/tree/main/documentation)
 [search](https://quickwit.io/docs/log-management/overview)
 [nav](https://thecodingmachine.github.io/react-native-boilerplate/blog)
+[ai docs](https://memgraph.com/docs/gqlalchemy/)
