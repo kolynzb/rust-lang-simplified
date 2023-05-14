@@ -1,9 +1,13 @@
-# [Ownership in Rust](https://youtu.be/VFIOSWy93H0)
+# Ownership in Rust
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VFIOSWy93H0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 - This is Rust's most unique feature ,and it enables Rust to make memory safety guarantees without needing a garbage collector.
 - All programs have to manage the way they use a computer’s memory while running. Some languages have [_garbage collection_](https://www.geeksforgeeks.org/garbage-collection-java/) that constantly looks for no longer used memory as the program runs; in other languages the programmer must explicitly allocate and free the memory. Rust uses a third approach: memory is managed through a system of ownership with a set of rules that the compiler checks at compile time. None of the ownership features slow down your program while it’s running.
 
-## [Stack & Heap](https://youtu.be/_8-ht2AKyH4)
+## Stack & Heap
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_8-ht2AKyH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 - Both the stack and the heap are parts of memory that are available to your code to use at runtime, but they are structured in different ways. The stack stores values in the order it gets them and removes the values in the opposite order.This is referred to as _last in, first out_. Think of a stack of plates: when you add more plates, you put them on top of the pile, and when you need a plate, you take one off the top. Adding or removing plates from the middle or bottom wouldn’t work as well! Adding data is called _pushing_ onto the stack, and removing data is called _popping_ off the stack.
 - All data stored on the stack must have a known, fixed size. Data with an unknown size at compile time or a size that might change must be stored on the heap instead. The heap is less organized: when you put data on the heap, you request a certain amount of space. The operating system finds an empty spot in the heap that is big enough, marks it as being in use, and returns a pointer, which is the address of that location. This process is called _allocating on the heap_ and is sometimes abbreviated as just _allocating_. Pushing values onto the stack is not considered allocating. Because the pointer is a known, fixed size, you can store the pointer on the stack, but when you want the actual data, you must follow the pointer.
@@ -91,14 +95,14 @@
 
   - A String is made up of three parts, shown on the left: a pointer to the memory that holds the contents of the string, a length, and a capacity.This group of data is stored on the stack. On the right is the memory on the heap that holds the contents.
   <center>
-  <img src="../images/string_heap_rep.jpg" alt="drawing" style="width:300px;"/>
+  ![](../../static/images/string_heap_rep.jpg)
   </center>
 
   - **_Length_** - Memory in bytes that the contents of the String are currently using.
   - **_Capacity_** - Memory in bytes that String has received from Operating System.
   - When we assign s1 to s2, the String data is copied, meaning we copy the pointer, the length, and the capacity that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the data representation in memory looks like _Figure 4-2_
   <center>
-  <img src="../images/string_bind.jpg" alt="drawing" style="width:300px;"/>
+  <img src="../../static/images/string_bind.jpg" alt="drawing" />
   </center>
   - The representation does not look like _Figure 4-3_, which is what memory would look like if Rust instead copied the heap data as well. If Rust did this, the operation `s2 = s1` could be very expensive in terms of runtime performance if the data on the heap were large.
   - Earlier, we said that when a variable goes out of scope, Rust automatically calls the drop function and cleans up the heap memory for that variable.But `Figure 4-2` shows both data pointers pointing to the same location. This is a problem: when s2 and s1 go out of scope, they will both try to free the same memory. This is known as a _double free error_ and is one of the memory safety bugs we mentioned previously. Freeing memory twice can lead to memory corruption, which can potentially lead to security vulnerabilities.
@@ -219,7 +223,7 @@ fn calculate_length(s: &String) -> usize {
 
 - These ampersands are references.
 <center>
-  <img src="../images/ref.jpg" alt="drawing" style="width:300px;"/>
+  <img src="../images/ref.jpg" alt="drawing" />
 </center>
 
 - The `&s1` syntax lets us create a reference that refers to the value of s1 but does not own it. Because it does not own it, the value it points to will not be dropped when the reference goes out of scope.Likewise, the signature of the function uses `&` to indicate that the type of the parameter s is a reference. Let’s add some explanatory annotations
