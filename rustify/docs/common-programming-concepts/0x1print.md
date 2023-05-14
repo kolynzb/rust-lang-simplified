@@ -78,5 +78,3 @@ fn main() {
 ### References
 
 - Rust Lang Book
-
-## [Next (_Variables in Rust_) 👉🏿](0x2vars.md)
