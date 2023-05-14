@@ -95,14 +95,14 @@
 
   - A String is made up of three parts, shown on the left: a pointer to the memory that holds the contents of the string, a length, and a capacity.This group of data is stored on the stack. On the right is the memory on the heap that holds the contents.
   <center>
-  ![](../../static/images/string_heap_rep.jpg)
+  ![](/images/string_heap_rep.jpg)
   </center>
 
   - **_Length_** - Memory in bytes that the contents of the String are currently using.
   - **_Capacity_** - Memory in bytes that String has received from Operating System.
   - When we assign s1 to s2, the String data is copied, meaning we copy the pointer, the length, and the capacity that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the data representation in memory looks like _Figure 4-2_
   <center>
-  <img src="../../static/images/string_bind.jpg" alt="drawing" />
+  <img src="/images/string_bind.jpg" alt="string_bind drawing" />
   </center>
   - The representation does not look like _Figure 4-3_, which is what memory would look like if Rust instead copied the heap data as well. If Rust did this, the operation `s2 = s1` could be very expensive in terms of runtime performance if the data on the heap were large.
   - Earlier, we said that when a variable goes out of scope, Rust automatically calls the drop function and cleans up the heap memory for that variable.But `Figure 4-2` shows both data pointers pointing to the same location. This is a problem: when s2 and s1 go out of scope, they will both try to free the same memory. This is known as a _double free error_ and is one of the memory safety bugs we mentioned previously. Freeing memory twice can lead to memory corruption, which can potentially lead to security vulnerabilities.
@@ -223,7 +223,7 @@ fn calculate_length(s: &String) -> usize {
 
 - These ampersands are references.
 <center>
-  <img src="../images/ref.jpg" alt="drawing" />
+  <img src="/images/ref.jpg" alt="drawing" />
 </center>
 
 - The `&s1` syntax lets us create a reference that refers to the value of s1 but does not own it. Because it does not own it, the value it points to will not be dropped when the reference goes out of scope.Likewise, the signature of the function uses `&` to indicate that the type of the parameter s is a reference. Let’s add some explanatory annotations
