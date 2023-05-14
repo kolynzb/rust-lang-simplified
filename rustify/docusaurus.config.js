@@ -31,6 +31,46 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+  plugins: [
+    [
+      "@docusaurus/plugin-ideal-image",
+      {
+        quality: 70,
+        max: 1030, // max resized image's size.
+        min: 640, // min resized image's size. if original is lower, use that size.
+        steps: 2, // the max number of images generated between min and max (inclusive)
+        disableInDev: true,
+      },
+    ],
+    [
+      "@docusaurus/plugin-pwa",
+      {
+        debug: true,
+        offlineModeActivationStrategies: [
+          "appInstalled",
+          "standalone",
+          "queryString",
+        ],
+        pwaHead: [
+          {
+            tagName: "link",
+            rel: "icon",
+            href: "/img/docusaurus.png",
+          },
+          {
+            tagName: "link",
+            rel: "manifest",
+            href: "/manifest.json", // your PWA manifest
+          },
+          {
+            tagName: "meta",
+            name: "theme-color",
+            content: "rgb(37, 194, 160)",
+          },
+        ],
+      },
+    ],
+  ],
 
   presets: [
     [
@@ -83,6 +123,12 @@ const config = {
             position: "right",
           },
         ],
+      },
+      algolia: {
+        appId: "X1Z85QJPUV",
+        apiKey: "bf7211c161e8205da2f933a02534105a",
+        indexName: "rust-essentials",
+  
       },
       footer: {
         style: "dark",
