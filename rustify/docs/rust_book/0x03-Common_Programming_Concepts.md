@@ -4,7 +4,7 @@
 
 ## Variables and mutability
 
-- By default variables in rust are immutable.To read more [Click Me 😥](/docs/0x2vars.md).
+- By default variables in rust are immutable.To read more [Click Me 😥](https://example.com/).
 
 ## Shadowing
 
@@ -37,11 +37,11 @@ let spaces = spaces.len();
 - Every value in Rust is of a certain data type, which tells Rust what kind of data is being specified so it knows how to work with that data.
 - Keep in mind that rust is a _statically typed_ language (_knows the types of all variables at compile time_)
 - The compiler can usually infer what type we want to use based on the value and how we use it.We must annotate types whenever we intend to convert them to other types later.
-- For more on Data types [click me 💀](/docs/0x03data-types.md)
+- For more on Data types [click me 💀](https://example.com/)
 
 ## Functions
 
-- Functions are pervasive in Rust. [👉Click for more info 👈](/docs/0x08-Functions.md)
+- Functions are pervasive in Rust. [👉Click for more info 👈](https://example.com/)
 
 ## Comments
 
@@ -50,4 +50,4 @@ let spaces = spaces.len();
 
 ## Control Flow
 
-- Deciding whether code should run based on certain conditions.To read more [😖 click me](/docs/0x09-Control_flow.md)
+- Deciding whether code should run based on certain conditions.To read more [😖 click me](https://example.com/)

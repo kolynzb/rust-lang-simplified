@@ -34,6 +34,5 @@
 
 ### References
 
-- [Rust lang Book](rust-programming-language-steve-klabnik.pdf)
+- [Rust lang Book](https://example.com/)
 
-## [Next (_Data types in Rust_) 👉🏿](0x03data-types.md)

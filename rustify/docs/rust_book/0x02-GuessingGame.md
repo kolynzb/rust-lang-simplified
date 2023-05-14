@@ -44,7 +44,7 @@ fn main() {
   crash and display the message that you passed as an argument to expect. If
   the read_line method returns an Err, it would likely be the result of an error coming from the underlying operating system. If this instance of `io::Result` is an Ok value, expect will take the return value that Ok is holding and return just that value to you so you can use it. In this case, that value is the number of bytes in what the user entered into standard input.
 
-- On to the next line, to learn more about using `println!` with place holders [click me 😭](../0x1print.md).
+- On to the next line, to learn more about using `println!` with place holders [click me 😭](https://example.com/).
 
 ## Generate a secret number.
 
@@ -52,12 +52,12 @@ fn main() {
 
 ### Using Crates to get more functionality
 
-- Remember that a crate is a collection of Rust source code file.The projects we have been building are _binary crates_ which is an executable. THe `rand` crate in a _library crate_ which contains code to be used in other programs. To add rand , add `rand = "0.3.14"` below `[dependencies]` in the [_Cargo.toml_](../../Cargo.toml) file.
+- Remember that a crate is a collection of Rust source code file.The projects we have been building are _binary crates_ which is an executable. THe `rand` crate in a _library crate_ which contains code to be used in other programs. To add rand , add `rand = "0.3.14"` below `[dependencies]` in the [_Cargo.toml_](https://example.com/) file.
 - Cargo understands Semantic Versioning
   (sometimes called _SemVer_), which is a standard for writing version numbers.
   The number `0.3.14` is actually shorthand for `^0.3.14`, which means “any version that has a public API compatible with version `0.3.14`.”
 
-- [Cargo.lock](../../Cargo.lock) File Ensuring Reproducible Builds by using the dependencies specified to generate the same artifact.So it basically stores all the versions that are compatible and where used in your program.
+- [Cargo.lock](https://example.com/) File Ensuring Reproducible Builds by using the dependencies specified to generate the same artifact.So it basically stores all the versions that are compatible and where used in your program.
 - To Update a crate. Run `cargo update`.The next time you run cargo build , Cargo will update the registry of crates available and reevaluate your rand requirements according to the new version you have specified
 
 ### Generate Random Numbered

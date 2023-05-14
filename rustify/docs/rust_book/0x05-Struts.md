@@ -114,7 +114,7 @@ fn main() {
 
 - Methods are similar to functions: they’re declared with the fn keyword and their name, they can have parameters and a return value, and they contain some code that is run when they’re called from somewhere else
 - Methods are different from functions in that they’re defined within the context of a struct.
-- Let’s change the [area](/src/struts.rs) function that has a Rectangle instance as a parameter and instead make an area method defined on the `Rectangle` struct.
+- Let’s change the [area](https://example.com/) function that has a Rectangle instance as a parameter and instead make an area method defined on the `Rectangle` struct.
 
 ```rs
 #[derive(Debug)]

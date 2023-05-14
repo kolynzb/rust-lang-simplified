@@ -93,14 +93,12 @@ let emoji:char = '\u{1F600}'; // using emoji unicode
 
 ## Tuples
 
-- A tuple is a general way of grouping together some number of other values with a variety of types into one compound type. Tuples have a fixed length: once declared, they cannot grow or shrink in size._For more [click me 😉](./0x05-Tuples.md)_
+- A tuple is a general way of grouping together some number of other values with a variety of types into one compound type. Tuples have a fixed length: once declared, they cannot grow or shrink in size._For more [click me 😉](https://example.com/)_
 
 ## Arrays
 
-- Another way to have a collection of multiple values is with an array. Unlike a tuple, every element of an array must have the same type. Arrays in Rust are different from arrays in some other languages because arrays in Rust have a fixed length, like tuples. [Click For more info 🔥](/docs/0x06-Arrays.md).
+- Another way to have a collection of multiple values is with an array. Unlike a tuple, every element of an array must have the same type. Arrays in Rust are different from arrays in some other languages because arrays in Rust have a fixed length, like tuples. [Click For more info 🔥](https://example.com/).
 
 ### References
 
-- [Rust lang Book](rust-programming-language-steve-klabnik.pdf)
-
-## [Next (_Strings in Rust_) 👉🏿](0x04-Strings.md)
+- [Rust lang Book](https://example.com/)
