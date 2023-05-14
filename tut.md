@@ -13,7 +13,6 @@
 [footer](https://github.com/iota-wiki/iota-wiki)
 [community](https://github.com/moja-global/community-website)
 [hero](https://github.com/nocalhost/nocalhost.github.io)
-[hero](https://github.com/thecodingmachine/react-native-boilerplate/tree/main/documentation)
 [search](https://quickwit.io/docs/log-management/overview)
 [nav](https://thecodingmachine.github.io/react-native-boilerplate/blog)
 [ai docs](https://memgraph.com/docs/gqlalchemy/)
