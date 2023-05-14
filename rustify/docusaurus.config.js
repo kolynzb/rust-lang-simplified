@@ -106,7 +106,7 @@ const config = {
       navbar: {
         title: "Rust Simplified",
         logo: {
-          alt: "My Site Logo",
+          alt: "Rust Muscot",
           src: "img/muscat.png",
         },
         items: [
@@ -117,6 +117,7 @@ const config = {
             label: "Tutorial",
           },
           { to: "/blog", label: "Blog", position: "left" },
+          { to: "/showcase", label: "Showcase", position: "left" },
           {
             href: "https://github.com/kolynzb/rust-lang-simplified/",
             label: "GitHub",
@@ -128,7 +129,6 @@ const config = {
         appId: "X1Z85QJPUV",
         apiKey: "bf7211c161e8205da2f933a02534105a",
         indexName: "rust-essentials",
-  
       },
       footer: {
         style: "dark",
@@ -155,7 +155,7 @@ const config = {
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                href: "https://twitter.com/Kolynz_b/",
               },
               {
                 label: "Whatsapp",
