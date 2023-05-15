@@ -1,30 +1,13 @@
 // import {
 //   ChevronRightIcon,
-//   DocumentDuplicateIcon,
 // } from "@heroicons/react/24/outline";
-// import { CopyToClipboard } from "react-copy-to-clipboard";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import clsx from "clsx";
 import styles from "./styles.module.css";
 
 export default function HomeHero(): JSX.Element {
-  const command = "npx lerna init";
-
-  const [copied, setCopied] = useState(false);
-  useEffect(() => {
-    let t: NodeJS.Timeout;
-    if (copied) {
-      t = setTimeout(() => {
-        setCopied(false);
-      }, 3000);
-    }
-    return () => {
-      t && clearTimeout(t);
-    };
-  }, [copied]);
-
   return (
-    <section className="padding-vert--sm">
+    <section className="">
       <div className="container">
         <div className="row">
           <div className="col col--8 margin-vert--xl">
@@ -36,7 +19,7 @@ export default function HomeHero(): JSX.Element {
             >
               <span className="badge badge--primary callout__badge">NEW</span>
               <span className={styles.callout__text}>
-                Nrwl takes stewardship!
+                Join Our Communities!
               </span>
               {/* <ChevronRightIcon
                 className={styles.callout__icon}
@@ -45,31 +28,24 @@ export default function HomeHero(): JSX.Element {
               <p>👉🏿</p>
             </a>
             <h1 className={styles.slogan}>
-              <span>The Original Tool for</span>
-              <span className={styles.slogan__highlight}>
-                JavaScript Monorepos
-              </span>
+              <span>Learn Using Simplified</span>
+              <span className={styles.slogan__highlight}>Rust Tutorials</span>
             </h1>
             <p className={styles.description}>
-              Lerna is a fast, modern build system for managing and publishing
-              multiple JavaScript/TypeScript packages from the same repository.
+              We have a collection of code examples, tutorials, and best
+              practices that will help you master Rust programming and become a
+              proficient Rust developer.
             </p>
             <div className="padding-vert--md row">
               <div className="col col--5">
                 <a
-                  href="/docs/getting-started"
+                  href="/docs/intro"
                   className="button button--lg button--block button--primary"
                 >
                   Get Started
                 </a>
               </div>
               <div className="col col--5">
-                {/* <CopyToClipboard
-                  text={command}
-                  onCopy={() => {
-                    setCopied(true);
-                  }}
-                > */}
                 <button
                   className={clsx(
                     "button button--lg button--block button--outline button--secondary",
@@ -77,11 +53,9 @@ export default function HomeHero(): JSX.Element {
                   )}
                 >
                   <span className={styles.command__text}>
-                    <span aria-hidden="true">$</span> {command}
+                    <span aria-hidden="true">$</span>
                   </span>
-                  {/* <DocumentDuplicateIcon className={styles.command__icon} /> */}
                 </button>
-                {/* </CopyToClipboard> */}
               </div>
             </div>
           </div>
