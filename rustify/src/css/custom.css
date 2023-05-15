@@ -31,9 +31,9 @@
 
 .navbar {
   background: transparent;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   box-shadow: none;
-  margin-top: -37px;
+  margin-top: -16px;
 }
 .navbar__item.navbar__link {
   display: flex;
