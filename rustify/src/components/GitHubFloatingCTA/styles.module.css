@@ -1,0 +1,75 @@
+.floatingCta {
+  box-shadow: 4px 8px 16px rgba(42, 42, 66, 0.25);
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  height: 48px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2a2a42;
+  padding: 0 16px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.floatingCtaContent {
+  margin-left: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.floatingCtaText {
+  color: white;
+}
+
+.floatingCtaLink {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: auto;
+  text-decoration: none;
+  color: inherit;
+}
+.floatingCtaLink > span {
+  margin: 0 5px;
+}
+.floatingCtaBadge {
+  display: flex;
+  min-height: 32px;
+  min-width: 58px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: white;
+  padding: 2px;
+  color: #2a2a42;
+}
+
+.floatingCtaClose {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  color: #9797a2;
+}
+
+.floatingCtaClose:hover {
+  transform: scale(1.25);
+}
+@media (min-width: 640px) {
+  .floatingCta {
+    bottom: 32px;
+    width: 350px;
+    border-radius: 20px;
+  }
+}
