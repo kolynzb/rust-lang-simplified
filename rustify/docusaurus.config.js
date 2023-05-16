@@ -33,6 +33,15 @@ const config = {
   },
   plugins: [
     [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "community",
+        path: "community",
+        routeBasePath: "community",
+        sidebarPath: require.resolve("./sidebarsCommunity.js"),
+      },
+    ],
+    [
       "@docusaurus/plugin-ideal-image",
       {
         quality: 70,
@@ -106,7 +115,7 @@ const config = {
       navbar: {
         title: "Rust Simplified",
         logo: {
-          alt: "Rust Muscot",
+          alt: "Rust Muscat",
           src: "img/muscat.png",
         },
         items: [
@@ -118,6 +127,12 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           { to: "/showcase", label: "Showcase", position: "left" },
+          {
+            to: "/community/support",
+            label: "Community",
+            position: "left",
+            activeBaseRegex: "/community/",
+          },
           {
             href: "https://github.com/kolynzb/rust-lang-simplified/",
             label: "GitHub",
