@@ -30,19 +30,19 @@ export default function Home(): JSX.Element {
   const isMobile = useIsMobile();
 
   const showGithubCta = useMemo(() => {
-    if (typeof window !== "undefined" && !isMobile) {
-      if (location.pathname.startsWith("/blog")) {
-        (window as Window & typeof globalThis & { Intercom?: any }).Intercom?.(
-          "update",
-          { hide_default_launcher: true }
-        );
-      } else {
-        (window as Window & typeof globalThis & { Intercom?: any }).Intercom?.(
-          "update",
-          { hide_default_launcher: false }
-        );
-      }
-    }
+    // if (typeof window !== "undefined" && !isMobile) {
+    //   if (location.pathname.startsWith("/blog")) {
+    //     (window as Window & typeof globalThis & { Intercom?: any }).Intercom?.(
+    //       "update",
+    //       { hide_default_launcher: true }
+    //     );
+    //   } else {
+    //     (window as Window & typeof globalThis & { Intercom?: any }).Intercom?.(
+    //       "update",
+    //       { hide_default_launcher: false }
+    //     );
+    //   }
+    // }
 
     if (location.pathname.startsWith("/docs")) {
       return false;
@@ -53,7 +53,7 @@ export default function Home(): JSX.Element {
 
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`Home: ${siteConfig.title}`}
       description="Simplifying Rust For All"
     >
       <HomepageHeader />
