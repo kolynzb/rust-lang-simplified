@@ -16,3 +16,13 @@
 [search](https://quickwit.io/docs/log-management/overview)
 [nav](https://thecodingmachine.github.io/react-native-boilerplate/blog)
 [ai docs](https://memgraph.com/docs/gqlalchemy/)
+
+
+https://dhghomon.github.io/easy_rust/Chapter_1.html
+https://stevedonovan.github.io/rust-gentle-intro/
+https://github.com/moja-global/community-website
+
+- Theme layout
+// https://github.dev/refinedev/refine/blob/master/documentation/src/context/GithubContext/index.tsx
+
+https://broken-bytes.medium.com/how-to-build-outstanding-documentation-with-docusaurus-36b93cbc21d7
