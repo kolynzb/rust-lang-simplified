@@ -46,16 +46,17 @@ export default function HomeHero(): JSX.Element {
                 </a>
               </div>
               <div className="col col--5">
-                <button
+                <a
+                  href="/blog"
                   className={clsx(
                     "button button--lg button--block button--outline button--secondary",
                     styles.command
                   )}
                 >
                   <span className={styles.command__text}>
-                    <span aria-hidden="true">$</span>
+                    <span aria-hidden="true">Our blog</span>
                   </span>
-                </button>
+                </a>
               </div>
             </div>
           </div>

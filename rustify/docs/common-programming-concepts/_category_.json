@@ -3,6 +3,6 @@
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "Common programming concepts in Rust"
+    "description": "This covers the common programming concepts in Rust"
   }
 }

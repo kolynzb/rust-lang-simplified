@@ -3,6 +3,6 @@
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Concepts from the rust lang book"
+    "description": "This covers the concepts from the rust lang book"
   }
 }
