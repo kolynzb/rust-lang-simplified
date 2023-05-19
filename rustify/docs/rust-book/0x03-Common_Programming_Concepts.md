@@ -1,4 +1,4 @@
-# Common Programming Concepts In Rust
+# Chtr 3: Common Programming Concepts In Rust
 
 - Specifically, you’ll learn about variables, basic types, functions, comments, and control flow.
 

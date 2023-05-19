@@ -1,5 +1,5 @@
-# Rust Installation
+# Chtr 1: Rust Installation
 
-# Recommendations
+## Recommendations
 
 - Download [Rust analyzer extension](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)

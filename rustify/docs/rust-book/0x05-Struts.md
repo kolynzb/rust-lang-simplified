@@ -1,4 +1,4 @@
-# Using Struts To Structure Related Data.
+# Chtr 5: Using Struts To Structure Related Data.
 
 - A struct, or structure, is a custom data type that lets you name and package together multiple related values that make up a meaningful group. If you’re familiar with an object-oriented language, a struct is like an object’s data attributes.
 

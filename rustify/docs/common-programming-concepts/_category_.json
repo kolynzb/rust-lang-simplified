@@ -1,0 +1,8 @@
+{
+  "label": "Common Programming Concepts",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Common programming concepts in Rust"
+  }
+}
