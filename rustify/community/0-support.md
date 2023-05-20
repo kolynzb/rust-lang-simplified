@@ -5,4 +5,4 @@ title: support
 
 # Support
 
-Docusaurus has a community of thousands of developers.
+To reach out for support contact
