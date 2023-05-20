@@ -1,6 +1,3 @@
-// import {
-//   ChevronRightIcon,
-// } from "@heroicons/react/24/outline";
 import React from "react";
 import clsx from "clsx";
 import styles from "./styles.module.css";
@@ -12,7 +9,7 @@ export default function HomeHero(): JSX.Element {
         <div className="row">
           <div className="col col--8 margin-vert--xl">
             <a
-              href="https://github.com/lerna/lerna/issues/3121"
+              href="https://chat.whatsapp.com/KwukBvkzcfW3BBXAOemMT9"
               target="_blank"
               rel="noreferrer"
               className={styles.callout}
@@ -21,10 +18,6 @@ export default function HomeHero(): JSX.Element {
               <span className={styles.callout__text}>
                 Join Our Communities!
               </span>
-              {/* <ChevronRightIcon
-                className={styles.callout__icon}
-                aria-hidden="true"
-              /> */}
               <p>👉🏿</p>
             </a>
             <h1 className={styles.slogan}>
@@ -69,6 +62,7 @@ export default function HomeHero(): JSX.Element {
                 //     'url("/images/background/blob-lerna-vertical.svg")',
                 // }}
               >
+                {/* TODO: make illustration with mid-journey */}
                 <img
                   src="/img/muscat.png"
                   alt="image"
