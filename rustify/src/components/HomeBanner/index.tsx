@@ -10,12 +10,12 @@ const HomeBanner = (props: Props) => {
     <div className={styles.startBtnSection}>
       <div className={styles.bottomBanner}>
         <h3>
-          <Translate>Simplifying Rust for Everybody</Translate>
+          <Translate>Lets unleash your inner Rustacean</Translate>
         </h3>
         <div className={styles.bigStartBtnBox}>
           <div className={styles.bigStartBtn}>
             <a href="/docs/">
-              <Translate>Get started</Translate>
+              <Translate>Get Rusty </Translate>
             </a>
           </div>
         </div>
