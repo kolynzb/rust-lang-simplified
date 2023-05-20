@@ -24,7 +24,7 @@
 }
 .cardsGroupSection {
   padding: 40px 40px 80px;
-  background-color: #0078f9;
+  background-color: #1f1818;
   border-radius: 4px;
   box-shadow: 0px 6px 10px 0px #000;
   margin: 7px;
@@ -92,5 +92,5 @@
 }
 
 .featureSvg {
-  height: 100px;
+  height: 160px;
 }
