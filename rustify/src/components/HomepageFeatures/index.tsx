@@ -9,33 +9,35 @@ type FeatureItem = {
   bgColor: string;
 };
 
+// svgs from: https://storyset.com/illustration
 const FeatureList: FeatureItem[] = [
   {
-    title: "Easy to Use",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    title: "Easy Learning Curve",
+    Svg: require("@site/static/img/feature-svgs/learning.svg").default,
     description:
-      "Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer.",
-    bgColor: "#",
+      "Experience a smooth learning curve with Rust's user-friendly syntax and well-structured documentation. Get up to speed quickly and start building robust applications in no time",
+    bgColor: "",
   },
   {
-    title: "Focus on What Matters",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    title: "Exhilarating Community",
+    Svg: require("@site/static/img/feature-svgs/community.svg").default,
     description:
-      "Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer.",
+      "Join a vibrant and supportive community of Rustaceans, where you can seek guidance, collaborate on projects, and share knowledge. Benefit from the collective wisdom and grow together",
+    bgColor: "#0f2b34",
+  },
+
+  {
+    title: "Open-Source Ecosystem",
+    Svg: require("@site/static/img/feature-svgs/open-source.svg").default,
+    description:
+      "Immerse yourself in an extensive open-source ecosystem with a wide range of libraries and frameworks. Leverage existing tools and contribute to exciting projects, fostering innovation and collaboration",
     bgColor: "#0f2b34",
   },
   {
-    title: "Powered by React",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    title: "Opportunity to Network",
+    Svg: require("@site/static/img/feature-svgs/network.svg").default,
     description:
-      "Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer.",
-    bgColor: "#0f2b34",
-  },
-  {
-    title: "Powered by React",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    description:
-      "Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same header and footer.",
+      "Connect with a vibrant network of Rust developers, fostering valuable connections with seasoned professionals, potential mentors, and fellow enthusiasts. Expand your horizons and seize new opportunities",
     bgColor: "",
   },
 ];
@@ -47,7 +49,7 @@ function Feature({ title, Svg, description, bgColor }: FeatureItem) {
       style={{ backgroundColor: bgColor }}
     >
       <strong>
-        <Translate>It&apos;s a</Translate>
+        <Translate>It&apos;s an</Translate>
       </strong>
       <div className={styles.title}>
         <p>
