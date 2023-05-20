@@ -23,7 +23,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/feature-svgs/community.svg").default,
     description:
       "Join a vibrant and supportive community of Rustaceans, where you can seek guidance, collaborate on projects, and share knowledge. Benefit from the collective wisdom and grow together",
-    bgColor: "#0f2b34",
+    bgColor: "#3d1b1b",
   },
 
   {
@@ -31,7 +31,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/feature-svgs/open-source.svg").default,
     description:
       "Immerse yourself in an extensive open-source ecosystem with a wide range of libraries and frameworks. Leverage existing tools and contribute to exciting projects, fostering innovation and collaboration",
-    bgColor: "#0f2b34",
+    bgColor: "#3d1b1b",
   },
   {
     title: "Opportunity to Network",
