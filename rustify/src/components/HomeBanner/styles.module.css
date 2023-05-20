@@ -121,7 +121,7 @@
   color: #ffffff;
   border-radius: 9999px;
   box-shadow: 0 25px 50px -12px rgba(239, 68, 68, 0.5);
-  transition: color 125ms, background-color 125ms, border-color 125ms;
+  transition: all ease-in-out 125ms;
 
   text-align: center;
 }
