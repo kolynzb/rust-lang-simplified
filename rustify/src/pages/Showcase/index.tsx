@@ -1,38 +1,40 @@
-import React, {useState, useMemo, useEffect} from 'react';
-import clsx from 'clsx';
-import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
-import Translate, {translate} from '@docusaurus/Translate';
-import {useHistory, useLocation} from '@docusaurus/router';
-import {usePluralForm} from '@docusaurus/theme-common';
+import React, { useState, useMemo, useEffect } from "react";
+import clsx from "clsx";
+import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
+import Translate, { translate } from "@docusaurus/Translate";
+import { useHistory, useLocation } from "@docusaurus/router";
+import { usePluralForm } from "@docusaurus/theme-common";
 
-import Link from '@docusaurus/Link';
-import Layout from '@theme/Layout';
-import FavoriteIcon from '@site/src/components/svgIcons/FavoriteIcon';
+import Link from "@docusaurus/Link";
+import Layout from "@theme/Layout";
+import FavoriteIcon from "@site/src/components/svgIcons/FavoriteIcon";
 import {
   sortedUsers,
   Tags,
   TagList,
   type User,
   type TagType,
-} from '@site/src/data/users';
-import Heading from '@theme/Heading';
+} from "@site/src/data/users";
+import Heading from "@theme/Heading";
 import ShowcaseTagSelect, {
   readSearchTags,
-} from './_components/ShowcaseTagSelect';
+} from "./_components/ShowcaseTagSelect";
 import ShowcaseFilterToggle, {
   type Operator,
   readOperator,
-} from './_components/ShowcaseFilterToggle';
-import ShowcaseCard from './_components/ShowcaseCard';
-import ShowcaseTooltip from './_components/ShowcaseTooltip';
+} from "./_components/ShowcaseFilterToggle";
+import ShowcaseCard from "./_components/ShowcaseCard";
+import ShowcaseTooltip from "./_components/ShowcaseTooltip";
 
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 
-const TITLE = translate({message: 'Docusaurus Site Showcase'});
+const TITLE = translate({ message: "Rust Circle Showcase" });
 const DESCRIPTION = translate({
-  message: 'List of websites people are building with Docusaurus',
+  message: "List of rust projects built by people in our community",
 });
-const SUBMIT_URL = 'https://github.com/facebook/docusaurus/discussions/7826';
+
+// TODO: ADD SUBMIT URL
+const SUBMIT_URL = "https://github.com/facebook/docusaurus/discussions/7826";
 
 type UserState = {
   scrollTopPosition: number;
@@ -40,12 +42,12 @@ type UserState = {
 };
 
 function restoreUserState(userState: UserState | null) {
-  const {scrollTopPosition, focusedElementId} = userState ?? {
+  const { scrollTopPosition, focusedElementId } = userState ?? {
     scrollTopPosition: 0,
     focusedElementId: undefined,
   };
   document.getElementById(focusedElementId)?.focus();
-  window.scrollTo({top: scrollTopPosition});
+  window.scrollTo({ top: scrollTopPosition });
 }
 
 export function prepareUserState(): UserState | undefined {
@@ -59,7 +61,7 @@ export function prepareUserState(): UserState | undefined {
   return undefined;
 }
 
-const SearchNameQueryKey = 'name';
+const SearchNameQueryKey = "name";
 
 function readSearchName(search: string) {
   return new URLSearchParams(search).get(SearchNameQueryKey);
@@ -69,12 +71,12 @@ function filterUsers(
   users: User[],
   selectedTags: TagType[],
   operator: Operator,
-  searchName: string | null,
+  searchName: string | null
 ) {
   if (searchName) {
     // eslint-disable-next-line no-param-reassign
     users = users.filter((user) =>
-      user.title.toLowerCase().includes(searchName.toLowerCase()),
+      user.title.toLowerCase().includes(searchName.toLowerCase())
     );
   }
   if (selectedTags.length === 0) {
@@ -84,7 +86,7 @@ function filterUsers(
     if (user.tags.length === 0) {
       return false;
     }
-    if (operator === 'AND') {
+    if (operator === "AND") {
       return selectedTags.every((tag) => user.tags.includes(tag));
     }
     return selectedTags.some((tag) => user.tags.includes(tag));
@@ -93,7 +95,7 @@ function filterUsers(
 
 function useFilteredUsers() {
   const location = useLocation<UserState>();
-  const [operator, setOperator] = useState<Operator>('OR');
+  const [operator, setOperator] = useState<Operator>("OR");
   // On SSR / first mount (hydration) no tag is selected
   const [selectedTags, setSelectedTags] = useState<TagType[]>([]);
   const [searchName, setSearchName] = useState<string | null>(null);
@@ -108,7 +110,7 @@ function useFilteredUsers() {
 
   return useMemo(
     () => filterUsers(sortedUsers, selectedTags, operator, searchName),
-    [selectedTags, operator, searchName],
+    [selectedTags, operator, searchName]
   );
 }
 
@@ -119,7 +121,7 @@ function ShowcaseHeader() {
       <p>{DESCRIPTION}</p>
       <Link className="button button--primary" to={SUBMIT_URL}>
         <Translate id="showcase.header.button">
-          🙏 Please add your site
+          🙏 Please add your rust project
         </Translate>
       </Link>
     </section>
@@ -127,19 +129,19 @@ function ShowcaseHeader() {
 }
 
 function useSiteCountPlural() {
-  const {selectMessage} = usePluralForm();
+  const { selectMessage } = usePluralForm();
   return (sitesCount: number) =>
     selectMessage(
       sitesCount,
       translate(
         {
-          id: 'showcase.filters.resultCount',
+          id: "showcase.filters.resultCount",
           description:
             'Pluralized label for the number of sites found on the showcase. Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
-          message: '1 site|{sitesCount} sites',
+          message: "1 site|{sitesCount} sites",
         },
-        {sitesCount},
-      ),
+        { sitesCount }
+      )
     );
 }
 
@@ -148,7 +150,7 @@ function ShowcaseFilters() {
   const siteCountPlural = useSiteCountPlural();
   return (
     <section className="container margin-top--l margin-bottom--lg">
-      <div className={clsx('margin-bottom--sm', styles.filterCheckbox)}>
+      <div className={clsx("margin-bottom--sm", styles.filterCheckbox)}>
         <div>
           <Heading as="h2">
             <Translate id="showcase.filters.title">Filters</Translate>
@@ -157,9 +159,9 @@ function ShowcaseFilters() {
         </div>
         <ShowcaseFilterToggle />
       </div>
-      <ul className={clsx('clean-list', styles.checkboxList)}>
+      <ul className={clsx("clean-list", styles.checkboxList)}>
         {TagList.map((tag, i) => {
-          const {label, description, color} = Tags[tag];
+          const { label, description, color } = Tags[tag];
           const id = `showcase_checkbox_id_${tag}`;
 
           return (
@@ -167,13 +169,14 @@ function ShowcaseFilters() {
               <ShowcaseTooltip
                 id={id}
                 text={description}
-                anchorEl="#__docusaurus">
+                anchorEl="#__docusaurus"
+              >
                 <ShowcaseTagSelect
                   tag={tag}
                   id={id}
                   label={label}
                   icon={
-                    tag === 'favorite' ? (
+                    tag === "favorite" ? (
                       <FavoriteIcon svgClass={styles.svgIconFavoriteXs} />
                     ) : (
                       <span
@@ -181,7 +184,7 @@ function ShowcaseFilters() {
                           backgroundColor: color,
                           width: 10,
                           height: 10,
-                          borderRadius: '50%',
+                          borderRadius: "50%",
                           marginLeft: 8,
                         }}
                       />
@@ -198,10 +201,10 @@ function ShowcaseFilters() {
 }
 
 const favoriteUsers = sortedUsers.filter((user) =>
-  user.tags.includes('favorite'),
+  user.tags.includes("favorite")
 );
 const otherUsers = sortedUsers.filter(
-  (user) => !user.tags.includes('favorite'),
+  (user) => !user.tags.includes("favorite")
 );
 
 function SearchBar() {
@@ -216,8 +219,8 @@ function SearchBar() {
       <input
         id="searchbar"
         placeholder={translate({
-          message: 'Search for site name...',
-          id: 'showcase.searchBar.placeholder',
+          message: "Search for site name...",
+          id: "showcase.searchBar.placeholder",
         })}
         value={value ?? undefined}
         onInput={(e) => {
@@ -233,7 +236,7 @@ function SearchBar() {
             state: prepareUserState(),
           });
           setTimeout(() => {
-            document.getElementById('searchbar')?.focus();
+            document.getElementById("searchbar")?.focus();
           }, 0);
         }}
       />
@@ -265,9 +268,10 @@ function ShowcaseCards() {
             <div className="container">
               <div
                 className={clsx(
-                  'margin-bottom--md',
-                  styles.showcaseFavoriteHeader,
-                )}>
+                  "margin-bottom--md",
+                  styles.showcaseFavoriteHeader
+                )}
+              >
                 <Heading as="h2">
                   <Translate id="showcase.favoritesList.title">
                     Our favorites
@@ -277,11 +281,8 @@ function ShowcaseCards() {
                 <SearchBar />
               </div>
               <ul
-                className={clsx(
-                  'container',
-                  'clean-list',
-                  styles.showcaseList,
-                )}>
+                className={clsx("container", "clean-list", styles.showcaseList)}
+              >
                 {favoriteUsers.map((user) => (
                   <ShowcaseCard key={user.title} user={user} />
                 ))}
@@ -292,7 +293,7 @@ function ShowcaseCards() {
             <Heading as="h2" className={styles.showcaseHeader}>
               <Translate id="showcase.usersList.allUsers">All sites</Translate>
             </Heading>
-            <ul className={clsx('clean-list', styles.showcaseList)}>
+            <ul className={clsx("clean-list", styles.showcaseList)}>
               {otherUsers.map((user) => (
                 <ShowcaseCard key={user.title} user={user} />
               ))}
@@ -302,13 +303,11 @@ function ShowcaseCards() {
       ) : (
         <div className="container">
           <div
-            className={clsx(
-              'margin-bottom--md',
-              styles.showcaseFavoriteHeader,
-            )}>
+            className={clsx("margin-bottom--md", styles.showcaseFavoriteHeader)}
+          >
             <SearchBar />
           </div>
-          <ul className={clsx('clean-list', styles.showcaseList)}>
+          <ul className={clsx("clean-list", styles.showcaseList)}>
             {filteredUsers.map((user) => (
               <ShowcaseCard key={user.title} user={user} />
             ))}
