@@ -9,24 +9,13 @@ const config = {
   title: "Rustify",
   tagline: "Rust the Easy way",
   favicon: "img/muscat.png",
-
-  // Set the production url of your site here
   url: "https://rust-lang-simplified.vercel.app/",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   organizationName: "rust-circle",
-  projectName: "rust-lang-simplified", // Usually your repo name.
+  projectName: "rust-lang-simplified",
   trailingSlash: false,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -91,14 +80,12 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/kolynzb/rust-lang-simplified/tree/main/rustify",
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/kolynzb/rust-lang-simplified/tree/main/rustify/blog",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -111,7 +98,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/muscat.png",
       navbar: {
         title: "Rust Simplified",
         logo: {
@@ -162,19 +149,23 @@ const config = {
             items: [
               {
                 label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                href: "https://stackoverflow.com/questions/tagged/rust",
+              },
+              {
+                label: "Whatsapp",
+                href: "https://chat.whatsapp.com/KwukBvkzcfW3BBXAOemMT9",
               },
               {
                 label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                href: "https://discordapp.com/invite/rust-circle",
+              },
+              {
+                label: "Events",
+                href: "https://www.eventbrite.com/e/rust-circle-meetup-tickets-628763577787?aff=ebdssbcitybrowse",
               },
               {
                 label: "Twitter",
                 href: "https://twitter.com/Kolynz_b/",
-              },
-              {
-                label: "Whatsapp",
-                href: "https://twitter.com/docusaurus",
               },
             ],
           },
