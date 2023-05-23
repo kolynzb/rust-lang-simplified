@@ -1,16 +1,21 @@
 # Chtr 2: Rust Guessing Game.
 
-- We’ll implement a classic beginner programming problem: a guessing game. Here’s how it works: the program will generate a random integer between 1 and 100. It will then prompt the player to enter a guess. After a guess is entered, the program will indicate whether the guess is too low or too high. If the guess is correct, the game will print a congratulatory message and exit.
+- We’ll implement a classic beginner programming problem.
 
-```rs
+> **Here’s how it works**: the program will generate a random integer between 1 and 100. It will then prompt the player to enter a guess. After a guess is entered, the program will indicate whether the guess is too low or too high. If the guess is correct, the game will print a congratulatory message and exit.
+
+```rust
 use std::io;
 
 fn main() {
     println!("Guess the number!");
     println!("Please input your guess.");
+
     let mut guess = String::new();
+
     io::stdin().read_line(&mut guess)
     .expect("Failed to read line");
+
     println!("You guessed: {}", guess);
 }
 
@@ -60,13 +65,15 @@ fn main() {
 - [Cargo.lock](https://example.com/) File Ensuring Reproducible Builds by using the dependencies specified to generate the same artifact.So it basically stores all the versions that are compatible and where used in your program.
 - To Update a crate. Run `cargo update`.The next time you run cargo build , Cargo will update the registry of crates available and reevaluate your rand requirements according to the new version you have specified
 
-### Generate Random Numbered
+### Generate Random Number
 
 - import rand crate `use rand::Rng;`
-  - The Rng trait defines methods
-    that random number generators implement, and this trait must be in scope for us to use those method
+
+
+- The Rng trait defines methods that random number generators implement, and this trait must be in scope for us to use those method
+
 - `let secret_num = rand::thread_rng().gen_range(1,101);`
-  - The `rand::thread_rng` function will give us the particular random number generator that we’re going to use: one that is local to the current thread of execution and seeded by the operating system. Then we call the gen*range method on the random number generator. This method is defined by the Rng trait that we brought into scope with the use rand::Rng statement. The gen_range method takes two numbers as arguments and generates a random number between them. It’s inclusive on the lower bound but exclusive on the upper bound, so we need to specify 1 and 101 to request a number between 1 and 100.(\_Incase you want to go through the documentation use `cargo doc --open` then click rand*)
+- The `rand::thread_rng` function will give us the particular random number generator that we’re going to use: one that is local to the current thread of execution and seeded by the operating system. Then we call the gen\*range method on the random number generator. This method is defined by the Rng trait that we brought into scope with the use rand::Rng statement. The gen*range method takes two numbers as arguments and generates a random number between them. It’s inclusive on the lower bound but exclusive on the upper bound, so we need to specify 1 and 101 to request a number between 1 and 100.(\_Incase you want to go through the documentation use `cargo doc --open` then click rand*)
 
 ### Comparing Guess to Secret Number
 
@@ -76,9 +83,9 @@ fn main() {
 
 ```rs
 match guess.cmp(&secret_number) {
-Ordering::Less => println!("Too small!"),
-Ordering::Greater => println!("Too big!"),
-Ordering::Equal => println!("You win!"),
+  Ordering::Less => println!("Too small!"),
+  Ordering::Greater => println!("Too big!"),
+  Ordering::Equal => println!("You win!"),
 }
 ```
 
