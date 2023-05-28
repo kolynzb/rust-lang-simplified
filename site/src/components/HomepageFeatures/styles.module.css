@@ -4,11 +4,13 @@
   margin-top: 40px;
   margin-bottom: 40px;
 }
+
 @media (max-width: 900px) {
   .cardsGroupContainer {
     width: 100%;
   }
 }
+
 .cardsGroup {
   display: flex;
   justify-content: center;
@@ -17,11 +19,13 @@
   max-width: 1214px;
   margin-left: calc(-7px * 2);
 }
+
 @media (max-width: 900px) {
   .cardsGroup {
     margin-left: auto;
   }
 }
+
 .cardsGroupSection {
   padding: 40px 40px 80px;
   background-color: #1f1818;
@@ -31,6 +35,7 @@
   width: calc((100% - 7px * 4) / 2);
   overflow: hidden;
 }
+
 @media (max-width: 900px) {
   .cardsGroupSection {
     width: 100%;
@@ -38,18 +43,22 @@
     margin: 7px 0;
   }
 }
+
 .cardsGroupSection3 strong {
   color: #0b0f13 !important;
 }
+
 .cardsGroupSection strong {
   color: #fff;
   font-size: 20px;
   font-family: "nexa_bold", "Roboto", -apple-system, BlinkMacSystemFont,
     Helvetica, Arial, sans-serif;
 }
+
 .cardsGroupSection3 .title {
   color: #0b0f13 !important;
 }
+
 .cardsGroupSection .title {
   display: flex;
   align-items: baseline;
@@ -58,32 +67,39 @@
   font-family: "nexa_bold", "Roboto", -apple-system, BlinkMacSystemFont,
     Helvetica, Arial, sans-serif;
 }
+
 .cardsGroupSection .title p {
   color: #fff;
   font-size: 24px;
   margin: 0;
   line-height: 40px;
 }
+
 .cardsGroupSection3 .title p {
   color: #0b0f13 !important;
 }
+
 .cardsGroupSection .title p .topic {
   font-size: 42px;
   margin-right: 10px;
 }
+
 .cardsGroupSection3 .detail {
   color: #0b0f13 !important;
 }
+
 .cardsGroupSection .detail {
   color: #fff;
   font-size: 14px;
   margin: 0;
   height: 90px;
 }
+
 .cardsGroupSection .icon {
   display: flex;
   justify-content: center;
 }
+
 .cardsGroupSection .icon img {
   width: 50%;
   height: 50%;
