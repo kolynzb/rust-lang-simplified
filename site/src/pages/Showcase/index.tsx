@@ -25,7 +25,6 @@ import ShowcaseFilterToggle, {
 } from "./_components/ShowcaseFilterToggle";
 import ShowcaseCard from "./_components/ShowcaseCard";
 import ShowcaseTooltip from "./_components/ShowcaseTooltip";
-
 import styles from "./styles.module.css";
 
 const TITLE = translate({ message: "Rust Circle Showcase" });
