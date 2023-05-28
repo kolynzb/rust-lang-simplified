@@ -15,6 +15,7 @@ const TITLE = translate({ message: "Community Gallery" });
 const DESCRIPTION = translate({
   message: "Images From Our Community",
 });
+const SUBMIT_URL = "https://github.com/kolynzb/";
 
 const Gallery: React.FC = () => {
   return (
@@ -59,9 +60,11 @@ const Gallery: React.FC = () => {
           </LightGallery>
         </section>
 
-        <button title="Submit Image" className={styles.submit_img__btn}>
-          <TbUpload size={24} color="white" />
-        </button>
+        <a href={SUBMIT_URL}>
+          <button title="Submit Image" className={styles.submit_img__btn}>
+            <TbUpload size={24} color="white" />
+          </button>
+        </a>
       </section>
     </Layout>
   );
