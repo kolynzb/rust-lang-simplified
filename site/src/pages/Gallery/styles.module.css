@@ -11,10 +11,10 @@
 
 .submit_img__btn {
   font-size: 18px;
-  padding: 15px;
+  width: 50px;
+  height: 50px;
   border: none;
   cursor: pointer;
-  display: inline-block;
   font-weight: 200;
   background-color: #ef4444;
   color: #ffffff;
@@ -37,14 +37,30 @@
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #000;
   color: #fff;
   padding: 5px;
   border-radius: 5px;
   font-size: 14px;
   visibility: hidden;
   opacity: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
   transition: visibility 0s, opacity 0.3s ease;
+  animation: skeleton-loading 2.5s infinite linear;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 .submit_img__btn:hover::before {
