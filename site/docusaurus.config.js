@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Rustify",
+  title: "Rust Simplified",
   tagline: "Rust the Easy way",
   favicon: "img/muscat.png",
   url: "https://rust-lang-simplified.vercel.app/",
@@ -53,7 +53,7 @@ const config = {
           {
             tagName: "link",
             rel: "icon",
-            href: "/img/docusaurus.png",
+            href: "/img/muscat.png",
           },
           {
             tagName: "link",
@@ -63,7 +63,7 @@ const config = {
           {
             tagName: "meta",
             name: "theme-color",
-            content: "rgb(37, 194, 160)",
+            content: "#ef4444",
           },
         ],
       },
